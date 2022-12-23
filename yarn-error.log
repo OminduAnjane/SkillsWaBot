@@ -1,0 +1,82 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js -D add rollup
+
+PATH: 
+  C:\Program Files\PowerShell\7;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python310\Scripts\;C:\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\PowerShell\7\;C:\Users\User\AppData\Local\Temp\VSD6BB8.tmp\SqlLocalDB2014SP1\;C:\Ruby30-x64\bin;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm;C:\Program Files (x86)\Nmap;C:\Program Files\heroku\bin;C:\Users\User\Downloads\platform-tools;C:\Users\User\AppData\Local\ComposerSetup\bin;C:\Users\User\AppData\Roaming\Composer\vendor\bin;C:\xampp\php
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/axios: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 44355
+      at ClientRequest.onError (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:152376:17)
+      at Object.onceWrapper (node:events:628:26)
+      at ClientRequest.emit (node:events:513:28)
+      at Socket.socketErrorListener (node:_http_client:481:9)
+      at Socket.emit (node:events:513:28)
+      at emitErrorNT (node:internal/streams/destroy:157:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "@green-api/whatsapp-api-client",
+    "version": "0.3.29",
+    "description": "Library to integrate with WhatsApp API. For details have look at https://green-api.com",
+    "license": "MIT",
+    "main": "lib/bundle.js",
+    "bugs": "https://github.com/green-api/whatsapp-api-client/issues",
+    "homepage": "https://github.com/green-api/whatsapp-api-client",
+    "scripts": {
+      "buildBrowser": "rollup --config rollup.config.browser.js --environment BUILD:production",
+      "buildNode": "rollup --config rollup.config.node.js --environment BUILD:production",
+      "build": "npm run buildBrowser && npm run buildNode",
+      "server": "node ./src/WebhookAPI.js"
+    },
+    "engines": {
+      "node": ">=10.0.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/green-api/whatsapp-api-client.git"
+    },
+    "author": "Green API team",
+    "files": [
+      "lib",
+      "bundle.js",
+      "whatsapp-api-client.min.js"
+    ],
+    "keywords": [
+      "whatsapp",
+      "whatsapp-api",
+      "whatsapp-library",
+      "whatsapp-send-message",
+      "whatsapp-sender",
+      "whatsapp-message-sender"
+    ],
+    "devDependencies": {
+      "@rollup/plugin-json": "^4.0.3",
+      "@rollup/plugin-node-resolve": "^7.1.3",
+      "dotenv": "8.2.0",
+      "rollup-plugin-commonjs": "^10.1.0",
+      "rollup-plugin-progress": "^1.1.2",
+      "rollup-plugin-terser": "^7.0.2"
+    },
+    "dependencies": {
+      "axios": "0.21.2",
+      "fs": "0.0.1-security",
+      "rollup": "^2.79.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
